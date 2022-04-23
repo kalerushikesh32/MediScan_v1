@@ -76,7 +76,7 @@
 
 .text1{
     position: relative;
-    height: 100%;
+    height: 60px;
     width: 100vw;
     padding: 30px 0 15px;
     margin-right: auto;
@@ -98,12 +98,12 @@
 }
 
 .footer_define{
-    margin: 0;
+    margin-top: 80px;
+    /* margin: 0; */
     padding: 3px;
     display: flex;
     align-items: center;
-    justify-content: center;
-    overflow: hidden;
+    justify-content: center;    
     background-color: #41444b;
 }
 
@@ -111,8 +111,77 @@
     color: #ececec;
     padding: 0 16px;
     display: block;
+    margin-top: 200px;
     margin-block-start: 1em;
     margin-block-end: 1em;
     margin-inline-start: 0px;
     margin-inline-end: 0px;
 }
+
+.detector_box{
+    position: relative;
+    height: 100%;
+    width: 100vw;
+    padding: 30px 0 15px;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    align-items: center;
+    display: flex;
+}
+
+
+.card{
+    margin-top: 35px;
+    align-self: center;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    height: 350px;
+    width: 250px;
+    border: 2px solid #6e6d6d;
+    border-radius: 5px;
+    background-color: #8793a3;
+    /*  */
+    /*  */
+}
+
+.card > p {
+    text-align: center;
+    align-items: center;
+}
+
+.file{
+    margin-top: 30px;
+    align-self: center;
+    background-color: #6e6d6d;
+    border-radius: 5px;
+    height: 20px;
+    width: 90px;
+    border: 1px solid #6e6d6d;
+    cursor: pointer;
+    color: #fff;
+    font-family: Arial;
+    font-size: 17px;
+    padding: 13px 40px;
+    text-decoration: none;
+    text-shadow: 0 1px 0 #6e6d6d;
+}
+
+.submit{
+    margin-top: 40px;
+    align-self: center;
+    background-color: #6e6d6d;
+    border-radius: 5px;
+    height: 50px;
+    width: 200px;
+    border: 1px solid #6e6d6d;
+    display: inline-block;
+    cursor: pointer;
+    color: #fff;
+    font-family: Arial;
+    font-size: 17px;
+    padding: 13px 20px;
+    text-decoration: none;
+    text-shadow: 0 1px 0 #6e6d6d;
+}
+
