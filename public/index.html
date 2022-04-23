@@ -21,12 +21,14 @@
                     <div class="text1">
                         <h2>Pneumonia Detection</h2>
                     </div>
-                    <div class="card">
-                        <p>Add image</p>
+                    <div class="card" id="imagePreview">
+                        <img src="" alt="Image Preview" class="image-preview__image">
+                        <span class="image-preview__default-text">Image Preview</span>
                     </div>
                     <div class="file">
                         <span>choose file</span>
-                        <input type="file" name="photo" multiple>
+                        <input type="file" accept="image/jpg image/png" name="inpFile" id="inpFile">
+                        <script src="main.js"></script>
                     </div>
                     <button class="submit" type="submit">Submit</button>
                     <footer class="footer_define">
