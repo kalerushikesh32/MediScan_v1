@@ -2,17 +2,18 @@
 <html lang="en">
     <head>
         <title>MediScan</title>
-        <link rel="icon" href="/static/icons/mediscan_icon.jpg">
-        <link rel="stylesheet" href="/static/css/main.css">
+        <link rel="icon" href="{{ url_for('static', filename='icons/mediscan_icon.jpg') }}">
+        <!-- <link rel="stylesheet" href="/static/css/main.css"> -->
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
     </head>
 
     <body class="margin_0">
         <div id="root">
-            <div class="main_bg">
+            <div class="main_bg">   
                 <div class="home">
                     <nav>
                         <ul class="toolbar">
-                                <img src="/static/icons/mediscan_icon.jpg" alt="MediScan">
+                                <img src="{{ url_for('static', filename='icons/mediscan_icon.jpg') }}" alt="MediScan">
                             <li>
                                 <a href="https://github.com/kalerushikesh32/MediScan_v1">GitHub</a>
                             </li>
@@ -25,7 +26,7 @@
 
                     {% block content %}{% endblock %}
 
-                    
+
                     <footer class="footer_define">
                         <p>MediScan -By Rushikesh & Ajay (2022)</p>
                     </footer>
