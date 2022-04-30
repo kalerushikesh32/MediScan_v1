@@ -1,0 +1,22 @@
+{% extends "index.html" %}
+
+{% block content %}
+
+<html>
+   <body>
+       <form method="post" action="{{url_for('result')}}" enctype="multipart/form-data" class="form_1">
+            <div class="card" id="imagePreview">
+                <img src="" alt="Image Preview" class="image-preview__image">
+                <span class="image-preview__default-text">Image Preview</span>
+            </div>
+            <div class="file">
+                <span style="margin-left: 27px;">Choose File</span>
+                <input type="file" accept="image/jpg image/png" name="inpFile" id="inpFile">
+                <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+            </div>
+                <input class="submit" type="submit"></input>
+        </form>
+    </body>
+</html>
+
+{% endblock %}
