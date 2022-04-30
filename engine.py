@@ -6,11 +6,19 @@ import PIL.Image
 from tensorflow import keras
 import pathlib
 import random
+import joblib
+import pickle
+
+# dir = "C:\\Users\\lenovo\\SPE\\MediScan_v1\model\\pickle\\"
+# with open(dir+'model_pickle','rb') as f:
+#   nn_model2 = pickle.load(f)
 
 def detector_1(filename1):
   dir = "C:\\Users\\lenovo\\SPE\\MediScan_v2\model\\"
-  dir1 = "C:\\Users\\lenovo\\SPE\\MediScan_v2\\static\\uploads\\"
+  # dir = "C:\\Users\\lenovo\\SPE\\MediScan_v1\model\\pickle\\"
+  dir1 = "C:\\Users\\lenovo\\SPE\\MediScan_v1\\static\\uploads\\"
   nn_model2 = keras.models.load_model(dir+"out" )
+  # nn_model2 = joblib.load(dir+'model_joblib')
 
   # normal_images_paths = dir+"image\\COVID.png"
   normal_images_paths = dir1+filename1
