@@ -8,9 +8,10 @@ import pathlib
 import random
 
 def detector_1(filename1):
-  dir = "C:\\Users\\lenovo\\SPE\\MediScan_v2\model\\"
-  dir1 = "C:\\Users\\lenovo\\SPE\\MediScan_v2\\static\\uploads\\"
-  nn_model2 = keras.models.load_model(dir+"out" )
+  path_2 = os.getcwd()
+  dir_model = path_2 + "\\model\\"
+  dir1 = path_2 + "\\static\\uploads\\"
+  nn_model2 = keras.models.load_model(dir_model+"out" )
 
   # normal_images_paths = dir+"image\\COVID.png"
   normal_images_paths = dir1+filename1

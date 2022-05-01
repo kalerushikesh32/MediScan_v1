@@ -1,8 +1,13 @@
 from flask import Flask,url_for,render_template,request,redirect
 import os
 from engine import detector_1
+from pathlib import Path
 
 app = Flask(__name__)
+
+path_1  = os.getcwd()
+
+print(path_1)
 
 
 @app.route("/", methods = ["GET", "POST"])
@@ -10,7 +15,7 @@ app = Flask(__name__)
 def home():
     return render_template("pneumonia.html")
 
-app.config["img_uploads"] = "C:\\Users\\lenovo\\SPE\\MediScan_v2\\static\\uploads"
+app.config["img_uploads"] = path_1+"\\static\\uploads"
 
 @app.route('/result',methods = ["GET","POST"])
 def result():
