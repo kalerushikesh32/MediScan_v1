@@ -1,3 +1,5 @@
-model/
+model/image/
+model/out/
+model/pickle/
 __pycache__/
 spe_env/
