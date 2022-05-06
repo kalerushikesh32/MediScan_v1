@@ -1,6 +1,6 @@
 import numpy as np
 import os
-import pandas as pd
+#import pandas as pd
 import PIL
 import PIL.Image
 from tensorflow import keras

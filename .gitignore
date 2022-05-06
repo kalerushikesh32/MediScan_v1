@@ -3,3 +3,4 @@ model/out/
 model/pickle/
 __pycache__/
 spe_env/
+model/__pycache__/
