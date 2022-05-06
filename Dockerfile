@@ -1,6 +1,8 @@
 FROM python:latest
 RUN mkdir /app
-ADD . /app
 WORKDIR /app
-RUN pip install -r requirements.txt
+ADD ./requirements.txt /app/requirements1.txt
+RUN pip install -r requirements1.txt
+ADD . /app
 CMD ["python", "app.py"]
+EXPOSE 80

@@ -11,7 +11,8 @@ from model.out_5.load import init
 def detector_1(filename1):
   path_2 = os.getcwd()
   # dir_model = path_2 + "\\model\\"
-  dir1 = path_2 + "\\static\\uploads\\"
+  # dir1 = path_2 + "\\static\\uploads\\"       ## For Windows
+  dir1 = path_2 + "/static/uploads/"            ## For Ubuntu
   # nn_model2 = keras.models.load_model(dir_model+"out" )
   nn_model2 = init()
 

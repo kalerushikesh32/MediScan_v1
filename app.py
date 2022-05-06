@@ -15,7 +15,8 @@ print(path_1)
 def home():
     return render_template("pneumonia.html")
 
-app.config["img_uploads"] = path_1+"\\static\\uploads"
+# app.config["img_uploads"] = path_1+"\\static\\uploads"            ##For Windows
+app.config["img_uploads"] = path_1+"/static/uploads"                ##For Ubuntu
 
 @app.route('/result',methods = ["GET","POST"])
 def result():
@@ -33,4 +34,4 @@ def result():
             return redirect(request.url)
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=True, host='127.0.0.0', port=80)
