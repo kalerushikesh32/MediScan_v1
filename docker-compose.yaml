@@ -1,0 +1,27 @@
+version: "3"
+ 
+services:
+# -------------------- Debian container ---------------#
+  ansible:
+    image: debian:latest
+    container_name: ansible
+    ports:
+      - "2200:22"
+    user: root
+    networks:
+      - docker_net
+    tty: true
+ 
+  target:
+    image: debian:latest
+    container_name: target
+    ports:
+      - "2222:22"
+    user: root
+    networks:
+      - docker_net
+    tty: true
+ 
+networks:
+  docker_net:
+    driver: bridge

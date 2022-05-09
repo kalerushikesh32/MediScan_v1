@@ -2,6 +2,11 @@ from flask import Flask,url_for,render_template,request,redirect
 import os
 from engine import detector_1
 from pathlib import Path
+import logging
+
+logging.basicConfig(filename='app.log',filemode='a',
+                    format='[%(asctime)s] [%(name)s] [%(levelname)s] - %(message)s',
+                    datefmt="%Y-%m-%d %H:%M:%S")
 
 app = Flask(__name__)
 
@@ -24,11 +29,13 @@ def result():
         print(request.files)
         if request.files:
             image = request.files["inpFile"]
+            logging.info(image.filename)
             image.save(os.path.join(app.config["img_uploads"],image.filename))
             # print("image saved")
             # print(image)
             # print(image.filename)
             predicted = detector_1(image.filename)
+            logging.info(predicted)
             return render_template("result.html",disease = predicted)
         else:
             return redirect(request.url)
