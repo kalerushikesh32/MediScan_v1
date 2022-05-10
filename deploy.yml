@@ -8,4 +8,4 @@
         state: started
 
     - name: pull docker image
-      shell: docker pull rk007again/calculator_devops:v1
+      shell: docker pull rk007again/medi1:latest
