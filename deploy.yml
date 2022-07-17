@@ -1,5 +1,5 @@
 ---
-- name: Pull docker image of Calculator
+- name: Pull docker image of model
   hosts: all
   tasks:
     - name: Start docker service
